@@ -4,7 +4,6 @@ var path = require("path");
 var app = express();
 var Mailchimp = require('mailchimp-api-v3')
 var config = require('./config.js')
-console.log(config)
 //Declaring PORT for deployment and testing
 var PORT = process.env.PORT || 8000;
 
