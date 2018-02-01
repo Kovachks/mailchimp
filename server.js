@@ -20,7 +20,8 @@ app.use(express.static("public"));
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/html/home.html");
 })
-
+console.log(config.postRoute)
+console.log(config.apiKey)
 //---------------------------MOVE TO CONFIG FILE IN PRODUCTION---------------------------
 
 
@@ -30,7 +31,7 @@ var mailchimp = new Mailchimp(config.apiKey);
 
 //function to test the pulling of data from the correct email list
 mailchimp.get({
-    path : '/lists/7909d83c98'
+    path : config.getRoute
   }, function (err, result) {
     console.log(result.stats)
   })
@@ -43,7 +44,11 @@ app.get("/send", function(req, res) {
     console.log("data to be posted " + JSON.stringify(data))
     mailchimp.post(config.postRoute, data
     ).then(function(results) {
+        console.log("success")
         console.log("results " + JSON.stringify(results))
+    }).catch(function (err) {
+        console.log(err)
+        console.log("error")
     })
        
 })

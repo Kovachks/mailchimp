@@ -1,3 +1,4 @@
+console.log("connected")
 $(document).ready(function() {
 
     // Setting submit click handler in order to send data to the Mailchimp API
@@ -19,7 +20,8 @@ $(document).ready(function() {
         console.log(info)
 
         //Initiating get route to send info to API
-        $.get("/send", info, function(data) { 
+        $.get("/send", info, function(data) {
+            console.log("data: " + data)
         })
     })    
 })
