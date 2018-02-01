@@ -3,10 +3,8 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var app = express();
 var Mailchimp = require('mailchimp-api-v3')
-
-
-
-
+var config = require('./config.js')
+console.log(config)
 //Declaring PORT for deployment and testing
 var PORT = process.env.PORT || 8000;
 
@@ -25,12 +23,11 @@ app.get("/", function(req, res) {
 })
 
 //---------------------------MOVE TO CONFIG FILE IN PRODUCTION---------------------------
-let apiKey = "abdedd5d78f72187f2b2703945ae6c5e-us17"
-let postRoute = 'lists/7909d83c98/members'
+
 
 
 //Initiating new mailChimp object
-var mailchimp = new Mailchimp(apiKey);
+var mailchimp = new Mailchimp(config.apiKey);
 
 //function to test the pulling of data from the correct email list
 mailchimp.get({
@@ -45,7 +42,7 @@ app.get("/send", function(req, res) {
     console.log(req.query)
     let data = req.query
     console.log("data to be posted " + JSON.stringify(data))
-    mailchimp.post(postRoute, data
+    mailchimp.post(config.postRoute, data
     ).then(function(results) {
         console.log("results " + JSON.stringify(results))
     })

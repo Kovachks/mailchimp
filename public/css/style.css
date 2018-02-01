@@ -1,0 +1,82 @@
+#headerImage {
+    width: 100%;
+}
+#ucaaImage {
+    position: absolute;
+    width: 33%;
+    z-index: 2;
+    top: 0;
+}
+#nav {
+    background-color: #e00122;
+}
+.navLink {
+	display: inline-block;
+	margin:0;
+	text-decoration: none;
+	height: 54px;
+	width: 125px;
+	color: #f5f5f5;
+    font-size: 1.25em;
+}
+.navLinkSelected {
+	display: inline-block;
+	margin:0;
+	text-decoration: none;
+	height: 54px;
+	width: 125px;
+	color: #fff;
+    font-size: 1.25em;
+    text-decoration: underline;
+}
+.navButton {
+	display: inline-block;	
+	line-height: 50px;
+	height: 54px;
+	width: 125px;	
+	text-align: center;
+	display: inline-block;
+    text-decoration: none;    
+}
+.navButton:hover {
+    display: inline-block;	
+	line-height: 50px;
+	height: 54px;
+	width: 125px;	
+	text-align: center;
+	display: inline-block;
+    text-decoration: none;  
+    color: #fff;  
+    background-color: #000000;
+}  
+#buttonDiv {
+    height: 100%;
+}
+.signupSheet {
+    padding-left: 5%;
+    margin-bottom: 100px;
+}
+#sendApi {
+    display: block;
+    margin: 5px auto;
+    padding: 5px 10px;
+}
+form {
+    display: block;
+    margin: 5px auto;
+}
+h2 {
+    width: 70%;
+    display: block;
+    margin: 5px auto;
+}
+input {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+h1 {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
