@@ -44,7 +44,6 @@ app.get("/send", function(req, res) {
     console.log("data to be posted " + JSON.stringify(data))
     mailchimp.post(config.postRoute, data
     ).then(function(results) {
-        console.log("success")
         console.log("results " + JSON.stringify(results))
     }).catch(function (err) {
         console.log(err)
