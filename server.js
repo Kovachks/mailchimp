@@ -1,3 +1,4 @@
+console.log("test variable: " + process.env.apiKey)
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
@@ -7,7 +8,7 @@ var Mailchimp = require('mailchimp-api-v3')
 var PORT = process.env.PORT || 8000;
 
 var config = ""
-console.log("test variable: " + process.env.apiKey)
+
 if (process.env.apiKey) {
     config = process.env
 } {
