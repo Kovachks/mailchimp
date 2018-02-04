@@ -53,9 +53,11 @@
     height: 100%;
 }
 .signupSheet {
-    padding-left: 5%;
-    margin-bottom: 100px;
+    display: block;
+    width: 60%;
+    margin: 20px auto 100px auto;
 }
+#signup
 #sendApi {
     display: block;
     margin: 5px auto;
