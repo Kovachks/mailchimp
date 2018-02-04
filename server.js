@@ -5,7 +5,8 @@ var app = express();
 var Mailchimp = require('mailchimp-api-v3')
 //Declaring PORT for deployment and testing
 var PORT = process.env.PORT || 8000;
-
+var config = require('./config.js') || process.env
+console.log(config)
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,18 +20,18 @@ app.use(express.static("public"));
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/html/home.html");
 })
-console.log(process.env.postRoute)
-console.log(process.env.apiKey)
+console.log(config.postRoute)
+console.log(config.apiKey)
 //---------------------------MOVE TO CONFIG FILE IN PRODUCTION---------------------------
 
 
 
 //Initiating new mailChimp object
-var mailchimp = new Mailchimp(process.env.apiKey);
+var mailchimp = new Mailchimp(config.apiKey);
 
 //function to test the pulling of data from the correct email list
 mailchimp.get({
-    path : process.env.getRoute
+    path : config.getRoute
   }, function (err, result) {
     console.log(result.stats)
   })
@@ -41,7 +42,7 @@ app.get("/send", function(req, res) {
     console.log(req.query)
     let data = req.query
     console.log("data to be posted " + JSON.stringify(data))
-    mailchimp.post(process.env.postRoute, data
+    mailchimp.post(config.postRoute, data
     ).then(function(results) {
         console.log("results " + JSON.stringify(results))
     }).catch(function (err) {
