@@ -10,8 +10,10 @@ var PORT = process.env.PORT || 8000;
 var config = ""
 
 if (process.env.apiKey) {
+    console.log("success")
     config = process.env
-} {
+} 
+else {
     console.log('test')
     config = require('./config.js')
 }
