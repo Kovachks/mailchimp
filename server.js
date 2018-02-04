@@ -5,8 +5,17 @@ var app = express();
 var Mailchimp = require('mailchimp-api-v3')
 //Declaring PORT for deployment and testing
 var PORT = process.env.PORT || 8000;
-var config = require('./config.js') || process.env
+
+var config = ""
+
+if (process.env.apiKey) {
+    config = process.env
+} {
+    console.log('test')
+    config = require('./config.js')
+}
 console.log(config)
+
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,7 +32,6 @@ app.get("/", function(req, res) {
 console.log(config.postRoute)
 console.log(config.apiKey)
 //---------------------------MOVE TO CONFIG FILE IN PRODUCTION---------------------------
-
 
 
 //Initiating new mailChimp object
