@@ -1,4 +1,3 @@
-console.log("test variable: " + process.env.apiKey)
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
@@ -17,7 +16,6 @@ else {
     console.log('test')
     config = require('./config.js')
 }
-console.log(config)
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
