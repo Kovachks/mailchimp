@@ -41,7 +41,7 @@ app.get("/send", function(req, res) {
     console.log(req.query)
     let data = req.query
     console.log("data to be posted " + JSON.stringify(data))
-    mailchimp.post(proces.env.postRoute, data
+    mailchimp.post(process.env.postRoute, data
     ).then(function(results) {
         console.log("results " + JSON.stringify(results))
     }).catch(function (err) {
