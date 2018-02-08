@@ -38,7 +38,7 @@
 	display: inline-block;
     text-decoration: none;    
 }
-.navButton:hover {
+.navButton a:hover {
     display: inline-block;	
 	line-height: 50px;
 	height: 54px;
@@ -46,8 +46,7 @@
 	text-align: center;
 	display: inline-block;
     text-decoration: none;  
-    color: #fff;  
-    background-color: #000000;
+    color: #000000;
 }  
 #buttonDiv {
     height: 100%;
