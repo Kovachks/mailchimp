@@ -38,7 +38,7 @@ console.log(config.apiKey)
 //Initiating new mailChimp object
 var mailchimp = new Mailchimp(config.apiKey);
 
-//function to test the pulling of data from the correct email list
+//function to test the pulling of data from the correct email list as a test
 mailchimp.get({
     path : config.getRoute
   }, function (err, result) {

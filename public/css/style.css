@@ -1,4 +1,11 @@
+body {
+    background-color: #dddbde
+}
+#header{
+    height: 100%
+}
 #headerImage {
+    margin-bottom: -5px;
     width: 100%;
 }
 #ucaaImage {
@@ -19,6 +26,15 @@
 	color: #f5f5f5;
     font-size: 1.25em;
 }
+.navLink:hover{
+	display: inline-block;
+	margin:0;
+	text-decoration: none;
+	height: 54px;
+	width: 125px;
+	color: black;
+    font-size: 1.25em;
+}
 .navLinkSelected {
 	display: inline-block;
 	margin:0;
@@ -26,6 +42,16 @@
 	height: 54px;
 	width: 125px;
 	color: #fff;
+    font-size: 1.25em;
+    text-decoration: underline;
+}
+.navLinkSelected:hover {
+	display: inline-block;
+	margin:0;
+	text-decoration: none;
+	height: 54px;
+	width: 125px;
+	color: black;
     font-size: 1.25em;
     text-decoration: underline;
 }
@@ -37,48 +63,85 @@
 	text-align: center;
 	display: inline-block;
     text-decoration: none;    
-}
-.navButton:hover {
-    display: inline-block;	
-	line-height: 50px;
-	height: 54px;
-	width: 125px;	
-	text-align: center;
-	display: inline-block;
-    text-decoration: none;  
-    color: #fff;  
-    background-color: #000000;
-}  
+} 
 #buttonDiv {
     height: 100%;
 }
 .signupSheet {
     display: block;
-    width: 60%;
+    width: 40%;
     margin: 20px auto 100px auto;
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid black;
 }
-#signup
+.signupSheet input {
+    height: 25px;
+    font-size: 18px;
+    width: 60%;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+.signupSheet h2 {
+    width: 60%;
+    display: block;
+    margin: 5px auto 0 auto;
+}
+#signup {
+    font-size: 28px;
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: 10px auto 10px auto;
+}
 #sendApi {
     display: block;
-    margin: 5px auto;
-    padding: 5px 10px;
+    margin: 0 auto 20px auto;
+    padding: 8px 30px;
+
 }
 form {
     display: block;
     margin: 5px auto;
 }
-h2 {
-    width: 70%;
-    display: block;
-    margin: 5px auto;
-}
-input {
-    width: 70%;
-    display: block;
-    margin: 0 auto;
-}
 h1 {
     width: 90%;
     display: block;
     margin: 0 auto;
+}
+#email {
+    margin: 0 auto;
+}
+@media only screen and (max-width: 500px) {
+    .signupSheet {
+        width: 90%;
+    }
+    .navButton {
+        width: 100px;
+    }
+    .navLink {
+        width: 100px;
+    }
+    .navLinkSelected {
+        width: 100px;
+    }
+    .navLinkSelected:hover {
+        display: inline-block;
+        margin:0;
+        text-decoration: none;
+        height: 54px;
+        width: 100px;
+        color: black;
+        font-size: 1.25em;
+        text-decoration: underline;
+    }
+    .navLink:hover{
+        display: inline-block;
+        margin:0;
+        text-decoration: none;
+        height: 54px;
+        width: 125px;
+        color: black;
+        font-size: 1.25em;
+    }
 }
