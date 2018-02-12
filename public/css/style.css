@@ -63,7 +63,21 @@ body {
 	text-align: center;
 	display: inline-block;
     text-decoration: none;    
+<<<<<<< HEAD
 } 
+=======
+}
+.navButton a:hover {
+    display: inline-block;	
+	line-height: 50px;
+	height: 54px;
+	width: 125px;	
+	text-align: center;
+	display: inline-block;
+    text-decoration: none;  
+    color: #000000;
+}  
+>>>>>>> e9952c15cca30ef7ae3b1a893efe696411b3396f
 #buttonDiv {
     height: 100%;
 }
