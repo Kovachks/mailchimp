@@ -30,6 +30,10 @@ app.use(express.static("public"));
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/html/home.html");
 })
+app.get("/signup", function(req, res) {
+    res.sendFile(__dirname + "/public/html/signup.html")
+})
+
 console.log(config.postRoute)
 console.log(config.apiKey)
 //---------------------------MOVE TO CONFIG FILE IN PRODUCTION---------------------------
